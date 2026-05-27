@@ -18,10 +18,18 @@ REPORTS_DIR    = ROOT_DIR / "reports"
 FIGURES_DIR    = ROOT_DIR / "reports" / "figures"
 
 # ── LLM Configuration ──────────────────────────────────────────────────────────
+# HuggingFace model IDs (for reference / metadata only)
 MODELS = {
     "llama2":   "meta-llama/Llama-2-7b-chat-hf",
     "mistral":  "mistralai/Mistral-7B-Instruct-v0.2",
     "zephyr":   "HuggingFaceH4/zephyr-7b-beta",
+}
+
+# Ollama model names (used for local inference via Ollama)
+OLLAMA_MODELS = {
+    "llama2":   "llama2:7b-chat",
+    "mistral":  "mistral:latest",
+    "zephyr":   "zephyr:7b-beta",
 }
 
 # Quantization: use 4-bit for VRAM < 12GB, 8-bit for 12-16GB, none for 24GB+

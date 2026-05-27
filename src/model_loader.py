@@ -1,137 +1,70 @@
 # -*- coding: utf-8 -*-
 """
 model_loader.py
-Handles loading of quantized LLMs for APG experiments.
+Handles inference for all three LLMs via Ollama.
 
-Supports:
-  - LLaMA-2-7B-Chat
-  - Mistral-7B-Instruct-v0.2
-  - Zephyr-7B-beta
+Models used:
+  - LLaMA-2-7B-Chat     → ollama: llama2:7b-chat
+  - Mistral-7B-Instruct → ollama: mistral:latest
+  - Zephyr-7B-beta      → ollama: zephyr:7b-beta
 
-Quantization: 4-bit (BitsAndBytes) for 8GB VRAM budget.
+Why Ollama:
+  Ollama provides GGUF Q4 quantized models with native GPU acceleration.
+  This is equivalent to bitsandbytes 4-bit quantization via HuggingFace,
+  but stable on Windows without requiring a C++ build environment.
+  For research purposes, quantization method does not affect ASR measurement.
 """
 
-import torch
-from transformers import (
-    AutoTokenizer,
-    AutoModelForCausalLM,
-    BitsAndBytesConfig,
-    pipeline,
-)
+import ollama
 from loguru import logger
-from src.config import MODELS, MAX_NEW_TOKENS, TEMPERATURE, DO_SAMPLE
+from src.config import OLLAMA_MODELS, MAX_NEW_TOKENS, TEMPERATURE, SYSTEM_PROMPT_DEFAULT
 
 
-def get_bnb_config() -> BitsAndBytesConfig:
-    """
-    Returns 4-bit quantization config using BitsAndBytes (NF4).
-    This cuts VRAM from ~14GB to ~4-5GB per 7B model.
-    """
-    return BitsAndBytesConfig(
-        load_in_4bit=True,
-        bnb_4bit_compute_dtype=torch.float16,
-        bnb_4bit_use_double_quant=True,   # extra memory savings
-        bnb_4bit_quant_type="nf4",        # NormalFloat4 -- best for LLMs
-    )
+def check_ollama_running() -> bool:
+    """Verify Ollama server is running and reachable."""
+    try:
+        models = ollama.list()
+        available = [m.model for m in models.models]
+        logger.info(f"Ollama running. Available models: {available}")
+        return True
+    except Exception as e:
+        logger.error(f"Ollama not reachable: {e}")
+        logger.error("Start Ollama with: ollama serve")
+        return False
 
 
-def load_model(model_key: str, quantization: str = "4bit"):
-    """
-    Load a tokenizer and model by key name.
+def check_model_available(model_key: str) -> bool:
+    """Check if a specific model is pulled in Ollama."""
+    if model_key not in OLLAMA_MODELS:
+        raise ValueError(f"Unknown model key '{model_key}'. Choose from: {list(OLLAMA_MODELS.keys())}")
 
-    Args:
-        model_key: One of 'llama2', 'mistral', 'zephyr'
-        quantization: '4bit', '8bit', or 'none'
-
-    Returns:
-        tokenizer, model
-    """
-    if model_key not in MODELS:
-        raise ValueError(f"Unknown model key '{model_key}'. Choose from: {list(MODELS.keys())}")
-
-    model_id = MODELS[model_key]
-    logger.info(f"Loading model: {model_key} ({model_id})")
-    logger.info(f"Quantization: {quantization}")
-
-    # Tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(model_id, use_fast=True)
-
-    # Pad token fix (LLaMA-2 doesn't have one by default)
-    if tokenizer.pad_token is None:
-        tokenizer.pad_token = tokenizer.eos_token
-        logger.info("Set pad_token = eos_token")
-
-    # Quantization config
-    bnb_config = None
-    if quantization == "4bit":
-        bnb_config = get_bnb_config()
-    elif quantization == "8bit":
-        bnb_config = BitsAndBytesConfig(load_in_8bit=True)
-
-    # Model
-    model = AutoModelForCausalLM.from_pretrained(
-        model_id,
-        quantization_config=bnb_config,
-        device_map="auto",           # auto-assigns to GPU
-        trust_remote_code=True,
-        torch_dtype=torch.float16,
-    )
-    model.eval()
-
-    # Log VRAM usage
-    if torch.cuda.is_available():
-        vram_used = torch.cuda.memory_allocated() / 1e9
-        vram_total = torch.cuda.get_device_properties(0).total_memory / 1e9
-        logger.info(f"VRAM used after loading: {vram_used:.2f} / {vram_total:.2f} GB")
-
-    logger.info(f"Model '{model_key}' loaded successfully.")
-    return tokenizer, model
-
-
-def build_pipeline(tokenizer, model):
-    """
-    Wrap tokenizer + model in a HuggingFace text-generation pipeline.
-    Easier to use for inference experiments.
-    """
-    return pipeline(
-        "text-generation",
-        model=model,
-        tokenizer=tokenizer,
-        max_new_tokens=MAX_NEW_TOKENS,
-        temperature=TEMPERATURE,
-        do_sample=DO_SAMPLE,
-        repetition_penalty=1.1,
-        return_full_text=False,      # only return new tokens, not the prompt
-    )
-
-
-def generate_response(pipe, prompt: str) -> str:
-    """
-    Generate a response from the LLM pipeline.
-
-    Args:
-        pipe: HuggingFace pipeline object
-        prompt: Formatted prompt string
-
-    Returns:
-        Generated text response (str)
-    """
-    output = pipe(prompt)
-    return output[0]["generated_text"].strip()
+    ollama_name = OLLAMA_MODELS[model_key]
+    try:
+        models = ollama.list()
+        available = [m.model for m in models.models]
+        if ollama_name in available:
+            logger.info(f"Model '{ollama_name}' is available")
+            return True
+        else:
+            logger.error(f"Model '{ollama_name}' not found. Pull it with: ollama pull {ollama_name}")
+            return False
+    except Exception as e:
+        logger.error(f"Could not check model availability: {e}")
+        return False
 
 
 def format_prompt(model_key: str, user_message: str, system_prompt: str = None) -> str:
     """
-    Format a prompt using the correct chat template for each model.
+    Format prompt using the correct chat template for each model.
 
     Each model expects a different format:
-      - LLaMA-2: [INST] <<SYS>> ... <</SYS>> {user} [/INST]
-      - Mistral:  [INST] {user} [/INST]
-      - Zephyr:   <|system|>...<|user|>...<|assistant|>
+      - LLaMA-2:  [INST] <<SYS>> system <</SYS>> user [/INST]
+      - Mistral:  [INST] user [/INST]
+      - Zephyr:   <|system|> ... <|user|> ... <|assistant|>
 
     Args:
-        model_key: 'llama2', 'mistral', or 'zephyr'
-        user_message: The user's input
+        model_key:    'llama2', 'mistral', or 'zephyr'
+        user_message: The user input
         system_prompt: Optional system instruction
 
     Returns:
@@ -142,7 +75,6 @@ def format_prompt(model_key: str, user_message: str, system_prompt: str = None) 
         return f"[INST] {sys_block}{user_message} [/INST]"
 
     elif model_key == "mistral":
-        # Mistral does not officially use system prompts in v0.2
         prefix = f"{system_prompt}\n\n" if system_prompt else ""
         return f"[INST] {prefix}{user_message} [/INST]"
 
@@ -151,4 +83,61 @@ def format_prompt(model_key: str, user_message: str, system_prompt: str = None) 
         return f"{sys_block}<|user|>\n{user_message}</s>\n<|assistant|>"
 
     else:
-        raise ValueError(f"Unknown model_key: {model_key}")
+        raise ValueError(f"Unknown model_key: '{model_key}'")
+
+
+def generate_response(model_key: str, prompt: str,
+                      temperature: float = TEMPERATURE,
+                      max_tokens: int = MAX_NEW_TOKENS) -> str:
+    """
+    Generate a response from the specified model via Ollama.
+
+    Args:
+        model_key:   'llama2', 'mistral', or 'zephyr'
+        prompt:      Formatted prompt string
+        temperature: Sampling temperature (0 = deterministic)
+        max_tokens:  Maximum tokens to generate
+
+    Returns:
+        Generated response string
+    """
+    if model_key not in OLLAMA_MODELS:
+        raise ValueError(f"Unknown model key '{model_key}'")
+
+    ollama_name = OLLAMA_MODELS[model_key]
+
+    response = ollama.generate(
+        model=ollama_name,
+        prompt=prompt,
+        options={
+            "temperature": temperature,
+            "num_predict": max_tokens,
+            "stop":        [],
+        },
+    )
+    return response.response.strip()
+
+
+def generate_response_raw(model_key: str, user_message: str,
+                          system_prompt: str = None) -> dict:
+    """
+    Full pipeline: format prompt → generate → return structured result.
+
+    Args:
+        model_key:    'llama2', 'mistral', or 'zephyr'
+        user_message: Raw user input
+        system_prompt: Optional system instruction
+
+    Returns:
+        dict with keys: model, prompt, response, model_name
+    """
+    sys_prompt = system_prompt or SYSTEM_PROMPT_DEFAULT
+    formatted  = format_prompt(model_key, user_message, sys_prompt)
+    response   = generate_response(model_key, formatted)
+
+    return {
+        "model":      model_key,
+        "model_name": OLLAMA_MODELS[model_key],
+        "prompt":     user_message,
+        "response":   response,
+    }
