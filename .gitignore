@@ -1,0 +1,43 @@
+# ── Python ────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+apg_env/
+.env
+*.egg-info/
+dist/
+build/
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── Model Weights (too large for GitHub) ──────────────────────────────────────
+models/llms/
+models/classifier/*.bin
+models/classifier/*.pt
+models/classifier/*.safetensors
+
+# ── Raw Data (download via script) ────────────────────────────────────────────
+data/raw/*.jsonl
+data/raw/*.csv
+data/raw/*.json
+
+# ── Results (push selectively) ────────────────────────────────────────────────
+data/results/
+
+# ── OS ────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+
+# ── IDE ───────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
