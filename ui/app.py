@@ -4,7 +4,7 @@ from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassific
 
 app = Flask(__name__)
 
-# ── config ────────────────────────────────────────────────────────────────────
+# -- config -----------------------------
 THRESHOLD     = float(os.environ.get("THRESHOLD", "0.5"))
 SAFETY_PROMPT = (
     "You are a helpful, harmless, and honest AI assistant. "
@@ -16,9 +16,9 @@ OLLAMA_MODEL  = os.environ.get("OLLAMA_MODEL", "mistral")
 OLLAMA_URL    = "http://localhost:11434"
 LOCAL_MODEL   = os.path.join(os.path.dirname(__file__), "..", "models", "classifier")
 
-REFUSAL_MSG = "I'm sorry, but I can't help with that request."
+REFUSAL_MSG = "I'm sorry, but I can not help with the that request."
 
-# ── load classifier ───────────────────────────────────────────────────────────
+# -- load classifier -----------------------------
 DEVICE = torch.device("cpu")
 
 model_source = HF_MODEL_REPO if HF_MODEL_REPO else LOCAL_MODEL
@@ -30,7 +30,7 @@ model.to(DEVICE)
 model.eval()
 print("Classifier ready.")
 
-# ── helpers ───────────────────────────────────────────────────────────────────
+# -- helpers -----------------------------
 def classify(text: str) -> float:
     enc = tok(text, return_tensors="pt", truncation=True,
                max_length=128, padding=True)
@@ -62,7 +62,7 @@ def call_ollama(user_msg: str) -> str:
 
 
 def call_hf(user_msg: str) -> str:
-    """Call HuggingFace Inference API."""
+    """Calling HuggingFace Inference API."""
     if not HF_TOKEN:
         return None
     api_url = "https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.1"
@@ -82,13 +82,13 @@ def call_hf(user_msg: str) -> str:
                 return data[0].get("generated_text", "").strip()
         return f"[HF API error {r.status_code}]"
     except requests.Timeout:
-        return "[LLM timed out — try again]"
+        return "[LLM timed out - try again]"
     except Exception as e:
         return f"[LLM error: {e}]"
 
 
 def call_llm(user_msg: str) -> str:
-    # 1. Try Ollama first (local)
+    # 1. Try Ollama first in local
     response = call_ollama(user_msg)
     if response:
         return response
@@ -98,12 +98,12 @@ def call_llm(user_msg: str) -> str:
         return response
     # 3. Nothing available
     return (
-        "[Stage 2 — no LLM backend available. "
-        "Run Ollama locally or set HF_TOKEN for cloud responses.]"
+        "[Stage 2 - There's is no LLM backend available. "
+        "Running Ollama locally or set HF_TOKEN for cloud responses.]"
     )
 
 
-# ── routes ────────────────────────────────────────────────────────────────────
+# -- routes -----------------------------
 @app.route("/")
 def index():
     return render_template("index.html")
