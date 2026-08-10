@@ -2,6 +2,7 @@ services:
   - type: web
     name: adaptivepromptguard
     env: python
+    pythonVersion: "3.11.9"
     rootDir: ui
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
