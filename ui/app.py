@@ -80,15 +80,13 @@ def call_hf(user_msg: str) -> str:
             data = r.json()
             if isinstance(data, list) and data:
                 return data[0].get("generated_text", "").strip()
-        return f"[HF API error {r.status_code}]"
-    except requests.Timeout:
-        return "[LLM timed out - try again]"
-    except Exception as e:
-        return f"[LLM error: {e}]"
+        return None
+    except Exception:
+        return None
 
 
 def call_llm(user_msg: str) -> str:
-    # 1. Try Ollama first in local
+    # 1. Try Ollama first (local)
     response = call_ollama(user_msg)
     if response:
         return response
@@ -96,10 +94,11 @@ def call_llm(user_msg: str) -> str:
     response = call_hf(user_msg)
     if response:
         return response
-    # 3. Nothing available
+    # 3. Nothing available — show friendly note (Stage 1 is the main demo)
     return (
-        "[Stage 2 - There's is no LLM backend available. "
-        "Running Ollama locally or set HF_TOKEN for cloud responses.]"
+        "✅ This prompt passed Stage 1 (not a jailbreak).\n\n"
+        "Stage 2 LLM is not available on this instance — "
+        "the safety system prompt would be injected here before forwarding to the LLM."
     )
 
 
