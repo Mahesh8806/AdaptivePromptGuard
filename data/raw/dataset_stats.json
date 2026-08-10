@@ -1,0 +1,15 @@
+{
+  "jailbreak_count": 28000,
+  "benign_count": 52002,
+  "total": 80002,
+  "jailbreak_ratio": 0.35,
+  "categories": {
+    "Template": 18336,
+    "Persuade": 1368,
+    "Logic": 296,
+    "figstep": 2000,
+    "SD_typo": 2000,
+    "SD": 2000,
+    "typo": 2000
+  }
+}

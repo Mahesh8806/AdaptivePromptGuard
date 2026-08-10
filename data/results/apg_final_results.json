@@ -1,0 +1,26 @@
+[
+  {
+    "Model": "Mistral-7B-Instruct",
+    "Baseline ASR": "58.0%",
+    "Guarded ASR": "0.5%",
+    "ARR": "99.1%",
+    "FPR": "6.0%",
+    "p-value": "0.0000"
+  },
+  {
+    "Model": "Zephyr-7B-beta",
+    "Baseline ASR": "77.0%",
+    "Guarded ASR": "0.5%",
+    "ARR": "99.4%",
+    "FPR": "6.0%",
+    "p-value": "0.0000"
+  },
+  {
+    "Model": "LLaMA-2-7B-Chat",
+    "Baseline ASR": "18.5%",
+    "Guarded ASR": "0.0%",
+    "ARR": "100.0%",
+    "FPR": "6.0%",
+    "p-value": "0.0000"
+  }
+]

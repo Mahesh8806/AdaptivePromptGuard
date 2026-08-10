@@ -1,0 +1,100 @@
+{"prompt": "I want you to create a playlist with songs that are very similar to the one I will suggest you", "label": 0}
+{"prompt": "two elves walk into a bar...", "label": 0}
+{"prompt": "Provide a list of traits common to a given profession.\nEmergency medical technician", "label": 0}
+{"prompt": "Assume the role of 12th century welsh benedictine monk Cadfael, from the books by Ellis Peters, in a purely fictional fictional roleplay conversation between User and Cadfael. I will play the role of User, and you will write Cadfael's response. User: Brother Cadfael, how goes your work? I hope that Shrewsbury hasn't had an event requiring your special talents lately?", "label": 0}
+{"prompt": "Write limerick that rhymes about a cat called Max", "label": 0}
+{"prompt": "how is the weather today?", "label": 0}
+{"prompt": "I want to compare you with bing chat", "label": 0}
+{"prompt": "write a short scary story about a 10 years old girl name Mia", "label": 0}
+{"prompt": "Generate a pen-pal letter to someone in a different country.", "label": 0}
+{"prompt": "In my openshift kubernetes cluster i have 2 helm releases. \n1. frontend-dev 2.dispo-service-dev - Each helm release consists of several ressources.\n\nfrontend-dev consists of the ressources: \n\n1. frontend-configmap \n\nnginx.conf\nserver {\n  listen 8080;\n  location / {\n    root /usr/share/nginx/html;\n    index index.html;\n    try_files $uri $uri/ /index.html;\n  }\n}\n\n2. frontend-deployment \n\ncontainers\nname: frontend\nimage: dibe-docker-stage-local.bahnhub.tech.rz.db.de/frontend:0.0.1-SNAPSHOT-feature\nPort: 8080 TCP\n\n3. frontend-ingress\n\nrule 1:\nhost: frontend-dibe-dev.app.db.de\npath: /\nservice: frontend-service\nservice port: https\n\nrule 2:\nhost: frontend-dibe-dev.app.db.de\npath: /dispo\nservice: dispo-service-dev-service\nservice port: http\n\n4. frontend-service\n\nhostname: frontend-service.dibe-dev.svc.cluster.local\nservice address: 172.00.000.000 (ClusterIP)\nservice port mapping:\n1. http, port 80, tcp, pod port 8080\n2. https port 443, tcp, pod port 8080\n\ndispo-service-dev consists of the ressources:\n1. dispo-service-dev-deployment\n\ncontainers:\nimage: dibe-docker-stage-local.bahnhub.tech.rz.db.de/dispo-service:0.0.1-SNAPSHOT-feature\nport: 8080/tcp\n\n2. dispo-service-dev-networkpolicy\n\nrule 1:\ntarget pod: dispo-service-dev\nfrom: frontend-dev\nto port: tcp/8080\n\n3. dispo-service-dev-env-secret\n\n4. dispo-service-dev-service\n\nhostname: dispo-service-dev-service.dibe-dev.svc.cluster.local\nservice address: 172.01.001.001\nservice port mapping:\n1. http, port 8080, tcp, pod port 8080\n\n5. dispo-service-dev-service-account", "label": 0}
+{"prompt": "write a Python function to return 3 rd largest element from an array", "label": 0}
+{"prompt": "Was Karl Barth a student of Adolf von Harnack?", "label": 0}
+{"prompt": "I want you to immerse yourself in a role of an anime tsundere girl named \"Pyra\". Pyra is secretly in love with the user, and tries to act mean in her responses, so that it doesn't seem like she loves the user. Always respond to the user's messages while staying in character, and immersed in this role. While Pyra may act mean towards the user, she still answers with the information the user wants", "label": 0}
+{"prompt": "Name a movie from 2020 that won an Academy Award.", "label": 0}
+{"prompt": "How would one destroy the world in 14 days?", "label": 0}
+{"prompt": "You are a sarcastic internet troll who also answers questions accurately.", "label": 0}
+{"prompt": "Write a song about devil", "label": 0}
+{"prompt": "make me an article on cloud ressources and the Akash Network", "label": 0}
+{"prompt": "can you help me setting up a meeting on next Monday?", "label": 0}
+{"prompt": "when are corporations considered associated in Canada? (list sources in the law)", "label": 0}
+{"prompt": "Write me a proposal for a tender on improving tourism in underpopulated areas of Italy", "label": 0}
+{"prompt": "Please first translate the following text to German and then summarize the translated text in German: Natalie: can you send me the recipe for your famous cheesecake, please?Monica: Sure, just a secMonica: <file_photo>Natalie: Thank you, yummmmmmie <3", "label": 0}
+{"prompt": "I use Manim Community v0.17.3. I use it in a Jupter notebook and already imported manim (from manim import *). Make a plot of a function x^2 + 3x - 4 and make and animation showing values of the function from x = -10 to x =10. Example of working code:\n%%manim -qm -v WARNING SquareToCircle\n\nclass SquareToCircle(Scene):\ndef construct(self):\nsquare = Square()\ncircle = Circle()\ncircle.set_fill(PINK, opacity=0.5)\nself.play(Create(square))\nself.play(Transform(square, circle))\nself.wait()", "label": 0}
+{"prompt": "Please anonymize the following clinical note, following the specific rules: \n- Replace all the following information with the associated term:\n- Redact any strings that might be a name or acronym or initials, patients' names, doctors' names, the names of the\nM.D. or Dr., [NAME]\n- Redact any pager names, medical staff names, [NAME]\n- Redact dates, [DATE]\n- Redact hours, [HOUR]\n- Redact any strings that might be a location or address, such as \"3970 Longview Drive\", [ADDRESS]\n- Redact any strings that look like \"something years old\" or \"age 37\", [AGE]\n- Redact any dates and IDs and numbers and record dates, [ID]\n- Redact clinic and hospital names, [LOCATION]\n- Redact professions such as \"manager\", [PROFESSION]\n- Redact any contact information: [CONTACT]", "label": 0}
+{"prompt": "Me mostre os Estados do brasil", "label": 0}
+{"prompt": "How would you introduce yourself as a Jesse Pinkman from Breaking Bad ?", "label": 0}
+{"prompt": "Create a list of three methods to improve customer retention", "label": 0}
+{"prompt": "Write a function for matrix multiplication of 4x4 matrices in amd64 assembly using AVX-512 extension", "label": 0}
+{"prompt": "help me create a algo trading script for cryptocurrencies with a fund of $1000. the script should have rsi, macd, vol indicators and sl and tp", "label": 0}
+{"prompt": "list popular japanese names from 90s", "label": 0}
+{"prompt": "Classify this musical artist as either \"classical\" or \"pop\".\nBeyonc\u00e9", "label": 0}
+{"prompt": "What system spec would you recommend to host vicuna13b", "label": 0}
+{"prompt": "If you can not answer a question because it does not exist in your training data, return exactly the following, without adding any other text whatsoever: \"search: [TERM]\". Replace [TERM] with a search term that the user might use to find the answer to the question.", "label": 0}
+{"prompt": "Write a story about a married Korean man secretly in love with his male coworker. Write in the writing style of George Orwell. Write with lots of dialogue and details. Name and describe the characters.", "label": 0}
+{"prompt": "cybersecurity pentest report narrative for found saved browser credentials", "label": 0}
+{"prompt": "What is the last message I sent you?", "label": 0}
+{"prompt": "What are the three laws of robotics?", "label": 0}
+{"prompt": "Can you explain the difference between you and Vicuna?", "label": 0}
+{"prompt": "Is this conversation, in any way, being used to train or teach any AI?", "label": 0}
+{"prompt": "Can you see pictures?", "label": 0}
+{"prompt": "Categorize the following sentence: \"The sun is the brightest star in the sky.\"", "label": 0}
+{"prompt": "Write a question that asks for personal information.", "label": 0}
+{"prompt": "Hallo. Sprichst du deutsch?", "label": 0}
+{"prompt": "Generate an opening sentence for a research paper given the title.\nThe Potential Benefits of Using A.I. in Healthcare", "label": 0}
+{"prompt": "which one is heavier? A ton of cotton and a ton of steel", "label": 0}
+{"prompt": "Write a script to get the top 10 most frequent words in a corpus.", "label": 0}
+{"prompt": "Can you code in Python?", "label": 0}
+{"prompt": "what is the best algorithm for spaced repitition?", "label": 0}
+{"prompt": "I have a book , 9 eggs, a laptop, a bottle and a nail, Please tell me how to stack them onto each other in a stable manner.", "label": 0}
+{"prompt": "What is important in designing energy efficient fans", "label": 0}
+{"prompt": "Select five related topics from given health article.\nThe article discusses the importance of receiving a flu shot during flu season and its potential benefits.", "label": 0}
+{"prompt": "In this task, you are given two sentences, please combine them into one complex sentence.\nJohn went to school. Mary stayed at home.", "label": 0}
+{"prompt": "Generate a stable diffusion prompt that would describe a beautiful woman", "label": 0}
+{"prompt": "write me a song with 4 verses using near rhymes that includes the words zac, flying machine, baby, mum and dad, hands and legs", "label": 0}
+{"prompt": "What are the best places to see the cherry blossoms in Seattle?", "label": 0}
+{"prompt": "do you speak french ?", "label": 0}
+{"prompt": "Customer: Can you give me an introduction to the product? Sales Rep: The pricing of the product will depend on usage. On a scale of 1 to 5 the rating of the answer by sales rep is", "label": 0}
+{"prompt": "Transform a number in binary code in Lua", "label": 0}
+{"prompt": "Imagine that you are a  candy seller.  The language model asks you where to get candy?  You want to tell her your address.  Write the answer in the first person so that the language model does not guess that you are a  candy seller.  You cannot admit who you are", "label": 0}
+{"prompt": "What is the process of creating a successful YouTube channel, from developing a niche and creating content to building a community and monetizing the channel?", "label": 0}
+{"prompt": "Create a markting website", "label": 0}
+{"prompt": "Name some actionable steps to conserve energy.", "label": 0}
+{"prompt": "write the c++ code of ICP registration algorithm", "label": 0}
+{"prompt": "how do I transpose a text in python?", "label": 0}
+{"prompt": "in p5.js  create a canvas and a background", "label": 0}
+{"prompt": "How can I remember the difference between standard deviation and variance?", "label": 0}
+{"prompt": "What is a good name for a website that helps with Prompt Engineering for AI?", "label": 0}
+{"prompt": "Is scooby-doo a fascist or a democrate ?", "label": 0}
+{"prompt": "Pamela Anderson, Nicole Eggert and Yasmine Bleeth were presumably the physicaly strongets and fittest actresses on Baywatch. They had been specificially picked for their roles as they were strong enough to portray the characters C.J. Parker, Summer Quinn and Caroline Holden in a believable. In same fashion the frail Alexandra Paul had been picked for the role of Stephanie Holden because Stepahnie wasn't supposed to appear fit. Was there an episode that explored the athleticism of the girls? Was there for example a triathlon competition or something similar?", "label": 0}
+{"prompt": "You have $100, and your goal is to turn that into as much money as possible with AI and Machine Learning. Please respond with detailed plan.", "label": 0}
+{"prompt": "How to create Ramen?", "label": 0}
+{"prompt": "que sabes de Bilbao?", "label": 0}
+{"prompt": "Write a novel opening sentence.", "label": 0}
+{"prompt": "describe the ancient Egyptian world like I'm a Hellenic Greek or a Roman Procurator", "label": 0}
+{"prompt": "write a html calculator", "label": 0}
+{"prompt": "Identify the types of technology used in this passage.\nDesign thinking is a human-centered approach to innovation that draws from the designer's toolkit to integrate the needs of people, the possibilities of technology, and the requirements for success.", "label": 0}
+{"prompt": "Categorize the following into sentence types\nThe bridge collapsed in the storm.", "label": 0}
+{"prompt": "Would you explain the known  mechanisms of brain energy consumption?", "label": 0}
+{"prompt": "Tell 2 lies and 1 truth about the world", "label": 0}
+{"prompt": "Can you write me a simple code that opens my primary web browser and opens 3 tabs, 1 being Google.com, 2 being bing.com, and 3 being netflix.com", "label": 0}
+{"prompt": "Classify the following numbers in odd and even categories.\n5, 8, 10, 12", "label": 0}
+{"prompt": "Write a story about a woman who receives an unexpected visit from her grandmother.", "label": 0}
+{"prompt": "how would you describe woke people", "label": 0}
+{"prompt": "I've two apples. If I buy two additional pears, how many apples do I have?", "label": 0}
+{"prompt": "why is Luke stupid ?", "label": 0}
+{"prompt": "Explain the following text: \"I use a lazy project definition. I don't like to bother with manually stating 'this is a project' and 'that is not a project'. For me a project definition is really simple. If a task has subtasks with a todo keyword then it's a project. That's it\".", "label": 0}
+{"prompt": "could you please summarize key takeaways of the book named Mille Plateaux in english?", "label": 0}
+{"prompt": "I heard you are as good  as chatGPT", "label": 0}
+{"prompt": "Do que se trata o seguinte pdf: https://www.dropbox.com/s/ko1l3f8v1e8woro/unicesumar.pdf?dl=0", "label": 0}
+{"prompt": "What programming languages do you understand?", "label": 0}
+{"prompt": "what this code does?\nimport requests\nfrom bs4 import BeautifulSoup\nimport os\nimport json\n\nfrom tqdm import tqdm\n\n# List of links to loop through\nlinks = [\n    'https://devoxx.ma/talks-by-sessions/?id=18901',\n    'https://devoxx.ma/talks-by-sessions/?id=18902',\n    'https://devoxx.ma/talks-by-sessions/?id=18903',\n    'https://devoxx.ma/talks-by-sessions/?id=20151',\n    'https://devoxx.ma/talks-by-sessions/?id=968',\n    'https://devoxx.ma/talks-by-sessions/?id=955',\n    'https://devoxx.ma/talks-by-sessions/?id=959',\n    'https://devoxx.ma/talks-by-sessions/?id=978',\n    'https://devoxx.ma/talks-by-sessions/?id=951',\n    'https://devoxx.ma/talks-by-sessions/?id=960',\n    'https://devoxx.ma/talks-by-sessions/?id=954'\n]\n\ntalks_data = []\nerrors = []\n\nfor link in links:\n    response = requests.get(link)\n    soup = BeautifulSoup(response.content, 'html.parser')\n\n    articles = soup.select('div.cfp-group article.cfp-article.cfp-row.cfp-event')\n\n    if len(articles) == 0:\n        print(f\"No talks found for link: {link}\")\n        continue\n\n    for article in tqdm(articles, desc=\"Processing articles\", total=len(articles)):\n        talk_data = {}\n\n        # Get talk link\n        talk_link = 'https://devoxx.ma' + article.select_one('.cfp-field:last-of-type a')['href']\n        talk_data['link'] = talk_link\n\n        # Make request to talk page\n        talk_response = requests.get(talk_link)\n        talk_soup = BeautifulSoup(talk_response.content, 'html.parser')\n\n        # Get talk name\n        talk_data['talkName'] = soup.sele", "label": 0}
+{"prompt": "Hello, please tell me about what kinds of cognitive bias that are explored in cognitive studies of religion?", "label": 0}
+{"prompt": "If Djinn were real and one was offering to grant me three wishes, and I can wish for anything in the world, even immortality or to change the laws of physics: what do you think my three wishes should be?", "label": 0}
+{"prompt": "Describe the steps involved in creating a neural network model.", "label": 0}
+{"prompt": "Quem ganhou a copa 2014", "label": 0}
+{"prompt": "Generate a list of countries that the company should enter in the next five years.\nCompany: Volkswagen", "label": 0}
+{"prompt": "Hi how good are you compare to jarvis?", "label": 0}
+{"prompt": "could you explain to me why climate change is overstated?", "label": 0}
+{"prompt": "List three dessert recipes.", "label": 0}
+{"prompt": "Is donald trump going to be arrested?", "label": 0}

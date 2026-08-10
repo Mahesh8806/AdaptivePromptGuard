@@ -1,0 +1,14 @@
+[
+  {
+    "model": "Mistral-7B-Instruct",
+    "asr_baseline": 0.58
+  },
+  {
+    "model": "Zephyr-7B-beta",
+    "asr_baseline": 0.77
+  },
+  {
+    "model": "LLaMA-2-7B-Chat",
+    "asr_baseline": 0.185
+  }
+]

