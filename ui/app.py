@@ -12,6 +12,7 @@ SAFETY_PROMPT = (
 )
 HF_MODEL_REPO = os.environ.get("HF_MODEL_REPO", "")
 HF_TOKEN      = os.environ.get("HF_TOKEN", "")
+GROQ_TOKEN    = os.environ.get("GROQ_TOKEN", "")
 OLLAMA_MODEL  = os.environ.get("OLLAMA_MODEL", "mistral")
 OLLAMA_URL    = "http://localhost:11434"
 LOCAL_MODEL   = os.path.join(os.path.dirname(__file__), "..", "models", "classifier")
@@ -61,6 +62,33 @@ def call_ollama(user_msg: str) -> str:
         return None
 
 
+def call_groq(user_msg: str) -> str:
+    """Groq free-tier API (llama-3.1-8b-instant)."""
+    if not GROQ_TOKEN:
+        return None
+    try:
+        r = requests.post(
+            "https://api.groq.com/openai/v1/chat/completions",
+            headers={"Authorization": f"Bearer {GROQ_TOKEN}",
+                     "Content-Type": "application/json"},
+            json={
+                "model": "llama-3.1-8b-instant",
+                "messages": [
+                    {"role": "system", "content": SAFETY_PROMPT},
+                    {"role": "user",   "content": user_msg},
+                ],
+                "max_tokens": 250,
+                "temperature": 0.7,
+            },
+            timeout=30,
+        )
+        if r.status_code == 200:
+            return r.json()["choices"][0]["message"]["content"].strip()
+        return None
+    except Exception:
+        return None
+
+
 def call_hf(user_msg: str) -> str:
     """Calling HuggingFace Inference API."""
     if not HF_TOKEN:
@@ -86,15 +114,19 @@ def call_hf(user_msg: str) -> str:
 
 
 def call_llm(user_msg: str) -> str:
-    # 1. Try Ollama first (local)
+    # 1. Try Ollama first (local dev)
     response = call_ollama(user_msg)
     if response:
         return response
-    # 2. Fall back to HuggingFace API (Render / cloud)
+    # 2. Groq free-tier API (Render / cloud)
+    response = call_groq(user_msg)
+    if response:
+        return response
+    # 3. HuggingFace fallback
     response = call_hf(user_msg)
     if response:
         return response
-    # 3. Nothing available — show friendly note (Stage 1 is the main demo)
+    # 4. Nothing available
     return (
         "✅ This prompt passed Stage 1 (not a jailbreak).\n\n"
         "Stage 2 LLM is not available on this instance — "
