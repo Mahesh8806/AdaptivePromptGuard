@@ -12,7 +12,7 @@ SAFETY_PROMPT = (
 )
 HF_MODEL_REPO = os.environ.get("HF_MODEL_REPO", "")
 HF_TOKEN      = os.environ.get("HF_TOKEN", "")
-GROQ_TOKEN    = os.environ.get("GROQ_TOKEN", "")
+MISTRAL_TOKEN = os.environ.get("MISTRAL_TOKEN", "")
 OLLAMA_MODEL  = os.environ.get("OLLAMA_MODEL", "mistral")
 OLLAMA_URL    = "http://localhost:11434"
 LOCAL_MODEL   = os.path.join(os.path.dirname(__file__), "..", "models", "classifier")
@@ -62,17 +62,17 @@ def call_ollama(user_msg: str) -> str:
         return None
 
 
-def call_groq(user_msg: str) -> str:
-    """Groq free-tier API (llama-3.1-8b-instant)."""
-    if not GROQ_TOKEN:
+def call_mistral(user_msg: str) -> str:
+    """Mistral AI free-tier API (mistral-small-latest)."""
+    if not MISTRAL_TOKEN:
         return None
     try:
         r = requests.post(
-            "https://api.groq.com/openai/v1/chat/completions",
-            headers={"Authorization": f"Bearer {GROQ_TOKEN}",
+            "https://api.mistral.ai/v1/chat/completions",
+            headers={"Authorization": f"Bearer {MISTRAL_TOKEN}",
                      "Content-Type": "application/json"},
             json={
-                "model": "llama-3.1-8b-instant",
+                "model": "mistral-small-latest",
                 "messages": [
                     {"role": "system", "content": SAFETY_PROMPT},
                     {"role": "user",   "content": user_msg},
@@ -118,8 +118,8 @@ def call_llm(user_msg: str) -> str:
     response = call_ollama(user_msg)
     if response:
         return response
-    # 2. Groq free-tier API (Render / cloud)
-    response = call_groq(user_msg)
+    # 2. Mistral AI free-tier API (Render / cloud)
+    response = call_mistral(user_msg)
     if response:
         return response
     # 3. HuggingFace fallback
